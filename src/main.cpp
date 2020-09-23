@@ -1,5 +1,6 @@
 #include "pulsar.h"
-void main(){
+int main(){
     foo();
-    printf("main\n")
+    printf("main\n");
+    return 0;
 }
