@@ -9,3 +9,10 @@ echo "7--- installing pulsar dependacies ---" && \
     apt install ./apache-pulsar-client*.deb && \
     rm -rf /var/local/git/pulsar 
     cd ~
+
+echo "8--- building alcor-control-agent"
+cd ~/pulsar-test && cmake . && make
+
+
+echo "10--- running alcor-control-agent"
+./build/bin/PulsarTest -d &
