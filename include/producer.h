@@ -3,7 +3,7 @@
 
 #include "pulsar/Client.h"
 #include "pulsar/Producer.h"
-#include "pulsar/configuration.h"
+#include "pulsar/ClientConfiguration.h"
 #include "pulsar/ProducerConfiguration.h"
 #include "pulsar/Message.h"
 #include "pulsar/Result.h"
