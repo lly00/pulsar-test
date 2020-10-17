@@ -56,7 +56,7 @@ void ACA_Message_Pulsar_Producer::publish(string message)
   Result result = this->ptr_client->createProducer(this->topic_name, *(this->ptr_producer));
   if (result != ResultOk) {
     cout << "Error creating producer: " << result;
-    return -1;
+    return;
   }
 
   // Publish 10 messages to the topic
