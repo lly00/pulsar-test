@@ -28,9 +28,9 @@ class ACA_Message_Pulsar_Producer {
   Client *ptr_client; //A pointer to the pulsar client
 
   public:
-  MessageProducer(string brokers, string topic, int partition);
+  ACA_Message_Pulsar_Producer(string brokers, string topic);
 
-  ~MessageProducer();
+  ~ACA_Message_Pulsar_Producer();
 
   string getBrokers() const;
 
