@@ -14,7 +14,7 @@
 
 #include <iostream>
 #include <stdexcept>
-#include "aca_message_pulsar_producer.h"
+#include "producer.h"
 
 using namespace std;
 using namespace pulsar;

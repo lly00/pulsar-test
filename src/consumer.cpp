@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "aca_message_pulsar_consumer.h"
+#include "consumer.h"
 #include <iostream>
 
 using namespace std;
