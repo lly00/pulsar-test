@@ -1,5 +1,6 @@
 #include "producer.h"
 #include "consumer.h"
+#include "pulsar.h"
 using namespace std;
 using namespace aca_message_pulsar;
 using namespace test;
@@ -9,7 +10,7 @@ string subscription = "my-sub";
 string topic = "my-topic";
 
 int main(){
-    Test test();
+    Test test;
     test.foo();
     Aca_Message_Pulsar_Producer producer(broker,topic);
     Aca_Message_Pulsar_Consumer consumer(broker,subscription);
