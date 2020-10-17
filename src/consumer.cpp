@@ -83,7 +83,7 @@ bool ACA_Message_Pulsar_Consumer::consumeDispatched(string topic)
   }
 
   else{
-    cout <<  "<=====incoming message: " << message.getDataAsString() << endl;
+    cout << "<=====incoming message: " << message.getDataAsString() << endl;
 
     // Now acknowledge message
     this->ptr_consumer->acknowledge(message);

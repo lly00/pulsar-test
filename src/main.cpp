@@ -1,7 +1,8 @@
 #include "producer.h"
 #include "consumer.h"
 using namespace std;
-using namespace aca_message_pulsar;
+using aca_message_pulsar::Aca_Message_Pulsar_Consumer;
+using aca_message_pulsar::Aca_Message_Pulsar_Producer;
 
 string broker = "pulsar://localhost:6543";
 string subscription = "my-sub";
