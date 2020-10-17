@@ -2,7 +2,7 @@
 #include<pulsar.h>
 namespace test{
 
-Test::foo(){
+void Test::foo(){
     printf("import test\n");
 }
 
