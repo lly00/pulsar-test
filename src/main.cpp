@@ -12,8 +12,8 @@ string topic = "my-topic";
 int main(){
     Test test;
     test.foo();
-    Aca_Message_Pulsar_Producer producer(broker,topic);
-    Aca_Message_Pulsar_Consumer consumer(broker,subscription);
+    ACA_Message_Pulsar_Producer producer(broker,topic);
+    ACA_Message_Pulsar_Consumer consumer(broker,subscription);
     producer.publish("my message");
     consumer.consumeDispatched(topic);
     return 0;
