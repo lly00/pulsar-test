@@ -1,5 +1,12 @@
-#include "pulsar.h"
+#include<stdio.h>
+namespace test{
 
-void foo(){
-    printf("import pulsar.h\n")
+class Test{
+  public:
+    void foo(){
+        printf("import test\n");
+    }
+            
+}
+
 }

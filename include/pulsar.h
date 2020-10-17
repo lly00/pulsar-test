@@ -1,3 +1,10 @@
 #include<stdio.h>
-#include "pulsar/Client.h"
-void foo();
+namespace test{
+
+class Test{
+  public:
+    void foo();
+            
+}
+
+}
