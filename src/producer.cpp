@@ -55,7 +55,7 @@ void ACA_Message_Pulsar_Producer::publish(string message)
 {
   Result result = this->ptr_client->createProducer(this->topic_name, *(this->ptr_producer));
   if (result != ResultOk) {
-    cout << "Error creating producer: " << result;
+    cout << "Error creating producer" << endl;
     return;
   }
 
@@ -63,7 +63,7 @@ void ACA_Message_Pulsar_Producer::publish(string message)
   for (int i = 0; i < 10; i++){
     Message msg = MessageBuilder().setContent(message).build();
     Result res = ptr_producer->send(msg);
-    cout << "Message sent: " << res;
+    cout << "Message sent" << endl;
   }
 }
 

@@ -7,6 +7,7 @@ set(SOURCES
 )
 
 FIND_LIBRARY(PULSAR pulsar /usr/lib NO_DEFAULT_PATH)
+link_libraries(${PULSAR})
 include_directories(${PULSAR_INCLUDE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
