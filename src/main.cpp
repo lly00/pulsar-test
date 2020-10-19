@@ -5,7 +5,7 @@ using namespace std;
 using namespace aca_message_pulsar;
 using namespace test;
 
-string broker = "pulsar://localhost:6543";
+string broker = "pulsar://localhost:6650";
 string subscription = "my-sub";
 string topic = "my-topic";
 
