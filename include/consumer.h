@@ -22,6 +22,7 @@
 #include "pulsar/Message.h"
 #include "pulsar/Result.h"
 
+
 using pulsar::ClientConfiguration;
 using pulsar::ConsumerConfiguration;
 using pulsar::Client;

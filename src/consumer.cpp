@@ -57,6 +57,12 @@ void ACA_Message_Pulsar_Consumer::setSubscriptionName(string subscription_name)
   this->subscription_name = subscription_name;
 }
 
+
+void messageListener(Consumer consumer,const Message& message){
+    consumer.acknowledge(message);
+    cout << "<=====incoming message: " << message.getDataAsString() << endl;
+}
+
 bool ACA_Message_Pulsar_Consumer::consumeDispatched(string topic)
 {
   int rc;
@@ -64,6 +70,7 @@ bool ACA_Message_Pulsar_Consumer::consumeDispatched(string topic)
   Result result;
   Message message;
 
+  this->consumer_config.setMessageListener(messageListener);
   result = this->ptr_client->subscribe(topic,this->subscription_name,this->consumer_config,*(this->ptr_consumer));
 
   if (result != Result::ResultOk){
@@ -75,19 +82,19 @@ bool ACA_Message_Pulsar_Consumer::consumeDispatched(string topic)
 
   
   //Receive message
-  result = this->ptr_consumer->receive(message);
+  // result = this->ptr_consumer->receive(message);
 
-  if (result != Result::ResultOk) {
-    cout << "Failed to receive message from topic:" << topic << endl;
-    return EXIT_FAILURE;
-  }
+  // if (result != Result::ResultOk) {
+  //   cout << "Failed to receive message from topic:" << topic << endl;
+  //   return EXIT_FAILURE;
+  // }
 
-  else{
-    cout << "<=====incoming message: " << message.getDataAsString() << endl;
+  // else{
+  //   cout << "<=====incoming message: " << message.getDataAsString() << endl;
 
-    // Now acknowledge message
-    this->ptr_consumer->acknowledge(message);
-  }
+  //   // Now acknowledge message
+  //   this->ptr_consumer->acknowledge(message);
+  // }
   return overall_rc;
 }
 

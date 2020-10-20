@@ -7,6 +7,7 @@
 #include "pulsar/ProducerConfiguration.h"
 #include "pulsar/Message.h"
 #include "pulsar/Result.h"
+#include "pulsar/MessageBuilder.h"
 
 using namespace std;
 using namespace pulsar;
