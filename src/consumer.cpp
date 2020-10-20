@@ -80,6 +80,9 @@ bool ACA_Message_Pulsar_Consumer::consumeDispatched(string topic)
 
   cout << "Consumer consuming messages from topic: " << topic << endl;
 
+  int n;
+  cin >> n;
+
   
   //Receive message
   // result = this->ptr_consumer->receive(message);
